@@ -293,6 +293,10 @@ public class SkidHierarchy implements Hierarchy {
                                         if (!(targetClass instanceof SkidClassNode))
                                             return;
 
+                                        if (targetClass.getMethods() == null || targetClass.getMethods().isEmpty()) {
+                                            return;
+                                        }
+
                                         assert targetClass.getMethods().size() == 1 : "Implicit Function must be single method!";
                                         final SkidMethodNode methodNode = (SkidMethodNode) targetClass.getMethods().get(0);
 
