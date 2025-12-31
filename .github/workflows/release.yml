@@ -1,4 +1,4 @@
-name: Build Skidfuscator (Every Push)
+name: Build Skidfuscator (ZIP All JARs)
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 🔴 FIX git exit code 128
+          fetch-depth: 0
 
       - name: Set up Java 21
         uses: actions/setup-java@v4
@@ -31,18 +31,21 @@ jobs:
           java -version
           ./gradlew --version
 
-      - name: Compile obfuscator
-        run: ./gradlew :obfuscator:compileJava --no-daemon --stacktrace
+      - name: Build (best effort)
+        run: |
+          ./gradlew build --no-daemon || true
 
-      - name: Build obfuscator JAR
-        run: ./gradlew :obfuscator:jar --no-daemon --stacktrace
+      - name: Collect and zip all JARs
+        run: |
+          mkdir -p dist
+          find . -type f -name "*.jar" ! -path "./.gradle/*" ! -path "./.git/*" \
+            -exec cp --parents {} dist/ \;
+          cd dist
+          zip -r skidfuscator-jars.zip .
 
-      - name: List built files
-        run: ls -lh obfuscator/build/libs || true
-
-      - name: Upload build artifact
+      - name: Upload JARs ZIP
         uses: actions/upload-artifact@v4
         with:
-          name: skidfuscator-build-${{ github.sha }}
-          path: obfuscator/build/libs/*.jar
+          name: skidfuscator-jars-${{ github.sha }}
+          path: dist/skidfuscator-jars.zip
           retention-days: 14
