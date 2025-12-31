@@ -1,0 +1,182 @@
+handler=Block #K, types=[Ljava/lang/IllegalStateException;], range=[Block #C, Block #E, Block #F, Block #H, Block #G, Block #D, Block #I]
+handler=Block #J, types=[Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;], range=[Block #C, Block #E, Block #F, Block #H, Block #G, Block #D, Block #I]
+handler=Block #S, types=[Ljava/io/IOException;], range=[Block #R, Block #Q]
+handler=Block #V, types=[Ljava/lang/RuntimeException;], range=[Block #U, Block #T]
+handler=Block #Y, types=[Ljava/lang/RuntimeException;], range=[Block #X, Block #W]
+handler=Block #AB, types=[Ljava/lang/IllegalAccessException;], range=[Block #AA, Block #Z]
+===#Block A(size=1, flags=1)===
+   0. synth(lvar0 = lvar0);
+      -> Immediate #A -> #B
+===#Block B(size=0, flags=0)===
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=2, flags=0)===
+   0. _consume(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.main(new java.lang.String[{2045734496 ^ lvar10}]));
+   1. if (dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.data[{2045734496 ^ lvar10}] != {2045734496 ^ lvar10})
+      goto D
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      -> Immediate #C -> #E
+      -> ConditionalJump[IF_ICMPNE] #C -> #D
+      <- Immediate #B -> #C
+===#Block D(size=3, flags=0)===
+   0. lvar2 = new java.lang.IllegalArgumentException;
+   1. _consume(lvar2.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Failed test! Stage: ", {1741865912 ^ lvar10}))));
+   2. throw lvar2;
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- ConditionalJump[IF_ICMPNE] #C -> #D
+===#Block E(size=2, flags=0)===
+   0. svar12 = {dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.data[{737989882 ^ lvar10}] ^ lvar10};
+   1. switch (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(svar12)) {
+      case 87684952:
+      	 goto	#H
+      case 87684954:
+      	 goto	#F
+      default:
+      	 goto	#G
+   }
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      -> Switch[87684952] #E -> #H
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> DefaultSwitch #E -> #G
+      -> Switch[87684954] #E -> #F
+      <- Immediate #C -> #E
+===#Block F(size=2, flags=0)===
+   0. lvar7 = {-156190143 ^ lvar10};
+   1. goto U
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      -> UnconditionalJump[GOTO] #F -> #U
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- Switch[87684954] #E -> #F
+===#Block U(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar10) == 141567567)
+      goto T
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #U -> #T
+      -> TryCatch range: [U...T] -> V ([Ljava/lang/RuntimeException;])
+      <- UnconditionalJump[GOTO] #F -> #U
+===#Block T(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException();
+      -> TryCatch range: [U...T] -> V ([Ljava/lang/RuntimeException;])
+      <- ConditionalJump[IF_ICMPEQ] #U -> #T
+===#Block V(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto I
+      -> UnconditionalJump[GOTO] #V -> #I
+      <- TryCatch range: [U...T] -> V ([Ljava/lang/RuntimeException;])
+      <- TryCatch range: [U...T] -> V ([Ljava/lang/RuntimeException;])
+===#Block G(size=2, flags=0)===
+   0. lvar7 = {-1165136288 ^ lvar10};
+   1. goto R
+      -> UnconditionalJump[GOTO] #G -> #R
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- DefaultSwitch #E -> #G
+===#Block R(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar10) == 256995170)
+      goto Q
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #R -> #Q
+      -> TryCatch range: [R...Q] -> S ([Ljava/io/IOException;])
+      <- UnconditionalJump[GOTO] #G -> #R
+===#Block Q(size=1, flags=0)===
+   0. throw new java/io/IOException();
+      -> TryCatch range: [R...Q] -> S ([Ljava/io/IOException;])
+      <- ConditionalJump[IF_ICMPEQ] #R -> #Q
+===#Block S(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto I
+      -> UnconditionalJump[GOTO] #S -> #I
+      <- TryCatch range: [R...Q] -> S ([Ljava/io/IOException;])
+      <- TryCatch range: [R...Q] -> S ([Ljava/io/IOException;])
+===#Block H(size=2, flags=0)===
+   0. lvar7 = {1308872873 ^ lvar10};
+   1. goto X
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      -> UnconditionalJump[GOTO] #H -> #X
+      <- Switch[87684952] #E -> #H
+===#Block X(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar10) == 35239096)
+      goto W
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #X -> #W
+      -> TryCatch range: [X...W] -> Y ([Ljava/lang/RuntimeException;])
+      <- UnconditionalJump[GOTO] #H -> #X
+===#Block W(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException();
+      -> TryCatch range: [X...W] -> Y ([Ljava/lang/RuntimeException;])
+      <- ConditionalJump[IF_ICMPEQ] #X -> #W
+===#Block Y(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto I
+      -> UnconditionalJump[GOTO] #Y -> #I
+      <- TryCatch range: [X...W] -> Y ([Ljava/lang/RuntimeException;])
+      <- TryCatch range: [X...W] -> Y ([Ljava/lang/RuntimeException;])
+===#Block I(size=4, flags=0)===
+   0. _consume(lvar0.self(lvar7, 1622780366));
+   1. lvar5 = new java.lang.IllegalArgumentException;
+   2. _consume(lvar5.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Failed test! Stage: ", lvar7))));
+   3. throw lvar5;
+      -> TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      -> TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- UnconditionalJump[GOTO] #V -> #I
+      <- UnconditionalJump[GOTO] #Y -> #I
+      <- UnconditionalJump[GOTO] #S -> #I
+===#Block J(size=3, flags=0)===
+   0. lvar1 = catch();
+   1. _consume(lvar1.printStackTrace());
+   2. lvar6 = {-1158523595 ^ lvar10};
+      -> Immediate #J -> #L
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+      <- TryCatch range: [C...I] -> J ([Ljavax/crypto/BadPaddingException;, Ljavax/crypto/IllegalBlockSizeException;, Ljavax/crypto/NoSuchPaddingException;, Ljava/security/InvalidKeyException;, Ljava/security/NoSuchAlgorithmException;])
+===#Block K(size=3, flags=0)===
+   0. lvar4 = catch();
+   1. lvar6 = {2049142583 ^ lvar10};
+   2. goto AA
+      -> UnconditionalJump[GOTO] #K -> #AA
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+      <- TryCatch range: [C...I] -> K ([Ljava/lang/IllegalStateException;])
+===#Block AA(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar10) == 19541365)
+      goto Z
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #AA -> #Z
+      -> TryCatch range: [AA...Z] -> AB ([Ljava/lang/IllegalAccessException;])
+      <- UnconditionalJump[GOTO] #K -> #AA
+===#Block Z(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [AA...Z] -> AB ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #AA -> #Z
+===#Block AB(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto L
+      -> UnconditionalJump[GOTO] #AB -> #L
+      <- TryCatch range: [AA...Z] -> AB ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [AA...Z] -> AB ([Ljava/lang/IllegalAccessException;])
+===#Block L(size=1, flags=0)===
+   0. if (dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.data[{513638384 ^ lvar10}] == lvar6)
+      goto N
+      -> ConditionalJump[IF_ICMPEQ] #L -> #N
+      -> Immediate #L -> #M
+      <- UnconditionalJump[GOTO] #AB -> #L
+      <- Immediate #J -> #L
+===#Block M(size=3, flags=0)===
+   0. lvar3 = new java.lang.IllegalArgumentException;
+   1. _consume(lvar3.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Failed test! Stage: ", lvar6))));
+   2. throw lvar3;
+      <- Immediate #L -> #M
+===#Block N(size=1, flags=0)===
+   0. return;
+      <- ConditionalJump[IF_ICMPEQ] #L -> #N

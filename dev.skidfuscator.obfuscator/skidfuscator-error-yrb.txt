@@ -1,0 +1,14 @@
+===#Block A(size=1, flags=1)===
+   0. synth(lvar0 = lvar0);
+      -> Immediate #A -> #B
+===#Block B(size=9, flags=0)===
+   0. lvar1 = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.getSecretEncryptionKey();
+   1. lvar2 = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.encryptText(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kraknykvkb(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.rdwbzwrmntbxcug(), dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bzghuwsrexyuiwv(), lvar7), lvar1);
+   2. lvar3 = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.decryptText(lvar2, lvar1);
+   3. _consume(java.lang.System.out.println());
+   4. _consume(java.lang.System.out.println(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Original Text: ", dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kraknykvkb(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kemrevyqlbtibhe(), dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bzghuwsrexyuiwv(), lvar7)))));
+   5. _consume(java.lang.System.out.println(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("AES Key (Hex Form): ", dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bytesToHex(lvar1.getEncoded())))));
+   6. _consume(java.lang.System.out.println(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Encrypted Text (Hex Form): ", dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bytesToHex(lvar2)))));
+   7. _consume(java.lang.System.out.println(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Decrypted Text: ", lvar3))));
+   8. return;
+      <- Immediate #A -> #B

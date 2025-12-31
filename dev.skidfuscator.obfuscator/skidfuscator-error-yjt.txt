@@ -1,0 +1,54 @@
+handler=Block #L, types=[Ljava/lang/IllegalAccessException;], range=[Block #K, Block #J]
+===#Block A(size=1, flags=1)===
+   0. synth(lvar0 = lvar0);
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. lvar1 = ((java.lang.Integer)dev.skidfuscator.core.TestCacheTemplate.initialPredicates.get(dev.skidfuscator.core.TestCacheTemplate.wtmssgaizu(dev.skidfuscator.core.TestCacheTemplate.ycqajfjvkqrbina(), dev.skidfuscator.core.TestCacheTemplate.mdxftacqosczdop(), lvar7))).intValue();
+   1. if (lvar1 != dev.skidfuscator.core.TestDispatcher.loaded)
+      goto D
+      -> ConditionalJump[IF_ICMPNE] #B -> #D
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=2, flags=0)===
+   0. lvar4 = {215622109 ^ lvar7};
+   1. goto K
+      -> UnconditionalJump[GOTO] #C -> #K
+      <- Immediate #B -> #C
+===#Block K(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar7) == 222590002)
+      goto J
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #K -> #J
+      -> TryCatch range: [K...J] -> L ([Ljava/lang/IllegalAccessException;])
+      <- UnconditionalJump[GOTO] #C -> #K
+===#Block J(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [K...J] -> L ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #K -> #J
+===#Block L(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto E
+      -> UnconditionalJump[GOTO] #L -> #E
+      <- TryCatch range: [K...J] -> L ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [K...J] -> L ([Ljava/lang/IllegalAccessException;])
+===#Block D(size=1, flags=0)===
+   0. lvar4 = {1416346650 ^ lvar7};
+      -> Immediate #D -> #E
+      <- ConditionalJump[IF_ICMPNE] #B -> #D
+===#Block E(size=1, flags=0)===
+   0. if (lvar4 != {1816791405 ^ lvar7})
+      goto F
+      -> Immediate #E -> #G
+      -> ConditionalJump[IF_ICMPNE] #E -> #F
+      <- Immediate #D -> #E
+      <- UnconditionalJump[GOTO] #L -> #E
+===#Block F(size=2, flags=0)===
+   0. lvar2 = dev.skidfuscator.core.TestCacheTemplate.initialPredicates.put(dev.skidfuscator.core.TestCacheTemplate.wtmssgaizu(dev.skidfuscator.core.TestCacheTemplate.limzqhplfpdstfg(), dev.skidfuscator.core.TestCacheTemplate.mdxftacqosczdop(), lvar7), java.lang.Integer.valueOf({lvar1 + ({1099450230 ^ lvar7})}));
+   1. return ((java.lang.Integer)dev.skidfuscator.core.TestCacheTemplate.initialPredicates.get(lvar0)).intValue();
+      <- ConditionalJump[IF_ICMPNE] #E -> #F
+===#Block G(size=4, flags=0)===
+   0. _consume(java.lang.System.out.println(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("Unmatched:  vs ", lvar1, dev.skidfuscator.core.TestDispatcher.loaded))));
+   1. lvar3 = new java.util.Random;
+   2. _consume(lvar3.<init>());
+   3. return lvar3.nextInt();
+      <- Immediate #E -> #G

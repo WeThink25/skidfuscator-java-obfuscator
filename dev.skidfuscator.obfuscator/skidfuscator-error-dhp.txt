@@ -1,0 +1,7 @@
+===#Block A(size=0, flags=1)===
+      -> Immediate #A -> #B
+===#Block B(size=3, flags=0)===
+   0. lvar0 = javax.crypto.KeyGenerator.getInstance(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kraknykvkb(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kwcxogctsxxseoz(), dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bzghuwsrexyuiwv(), lvar3));
+   1. _consume(lvar0.init({985636486 ^ lvar3}));
+   2. return lvar0.generateKey();
+      <- Immediate #A -> #B

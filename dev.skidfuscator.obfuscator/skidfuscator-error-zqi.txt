@@ -1,0 +1,123 @@
+handler=Block #O, types=[Ljava/lang/IllegalAccessException;], range=[Block #I, Block #H]
+===#Block A(size=9, flags=1)===
+   0. lvar12 = {1496770164 ^ {613531678 ^ 1639190757}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. synth(lvar2 = lvar2);
+   4. synth(lvar3 = lvar3);
+   5. synth(lvar4 = lvar4);
+   6. synth(lvar5 = lvar5);
+   7. synth(lvar6 = lvar6);
+   8. lvar12 = {836557876 ^ lvar12};
+      -> Immediate #A -> #B
+===#Block B(size=4, flags=0)===
+   0. lvar7 = java.lang.Class.forName((java.lang.String)lvar4);
+   1. lvar8 = java.lang.invoke.MethodType.fromMethodDescriptorString((java.lang.String)lvar6, lvar7.getClassLoader());
+   2. if (((java.lang.Integer)lvar3).intValue() != {768600579 ^ lvar12})
+      goto N
+   3. lvar12 = {32462224 ^ lvar12};
+      -> Immediate #B -> #D
+      -> ConditionalJump[IF_ICMPNE] #B -> #N
+      <- Immediate #A -> #B
+===#Block N(size=2, flags=10100)===
+   0. lvar12 = dev.skidfuscator.core.TestReferenceDispatcher.ovwyrojzkitazaln(lvar12, 874245204);
+   1. goto C
+      -> UnconditionalJump[GOTO] #N -> #C
+      <- ConditionalJump[IF_ICMPNE] #B -> #N
+===#Block C(size=3, flags=0)===
+   0. lvar9 = new java.lang.invoke.MutableCallSite;
+   1. _consume(lvar9.<init>(lvar0.findVirtual(lvar7, (java.lang.String)lvar5, lvar8).asType(lvar2)));
+   2. lvar12 = {1876444034 ^ lvar12};
+      -> Immediate #C -> #E
+      <- UnconditionalJump[GOTO] #N -> #C
+===#Block D(size=3, flags=0)===
+   0. lvar9 = new java.lang.invoke.MutableCallSite;
+   1. _consume(lvar9.<init>(lvar0.findStatic(lvar7, (java.lang.String)lvar5, lvar8).asType(lvar2)));
+   2. goto K
+      -> UnconditionalJump[GOTO] #D -> #K
+      <- Immediate #B -> #D
+===#Block K(size=1, flags=10100)===
+   0. switch (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar12)) {
+      case 92233283:
+      	 goto	#L
+      case 516486216:
+      	 goto	#I
+      case 995942646:
+      	 goto	#K
+      case 1225619315:
+      	 goto	#G
+      default:
+      	 goto	#G
+   }
+      -> DefaultSwitch #K -> #G
+      -> Switch[995942646] #K -> #K
+      -> Switch[1225619315] #K -> #G
+      -> Switch[516486216] #K -> #I
+      -> Switch[92233283] #K -> #L
+      -> Immediate #K -> #L
+      <- UnconditionalJump[GOTO] #D -> #K
+      <- Switch[995942646] #K -> #K
+===#Block L(size=2, flags=100)===
+   0. lvar12 = {413779666 ^ lvar12};
+   1. goto I
+      -> UnconditionalJump[GOTO] #L -> #I
+      <- Switch[92233283] #K -> #L
+      <- Immediate #K -> #L
+===#Block I(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar12) == 97151195)
+      goto H
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #I -> #H
+      -> TryCatch range: [I...H] -> O ([Ljava/lang/IllegalAccessException;])
+      <- Switch[516486216] #K -> #I
+      <- UnconditionalJump[GOTO] #L -> #I
+===#Block H(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [I...H] -> O ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #I -> #H
+===#Block O(size=1, flags=0)===
+   0. switch (rnrqiaasxzigoubn.irtsskmbdllglsqw.rjiuafhwfbvkmxfs(lvar12)) {
+      case -1538535479:
+      	 goto	#P
+      case 1203300202:
+      	 goto	#Q
+      default:
+      	 goto	#R
+   }
+      -> DefaultSwitch #O -> #R
+      -> Switch[1203300202] #O -> #Q
+      -> Switch[-1538535479] #O -> #P
+      <- TryCatch range: [I...H] -> O ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [I...H] -> O ([Ljava/lang/IllegalAccessException;])
+===#Block P(size=2, flags=10100)===
+   0. lvar12 = dev.skidfuscator.core.TestReferenceDispatcher.ovwyrojzkitazaln(lvar12, 1823648398);
+   1. goto J
+      -> UnconditionalJump[GOTO] #P -> #J
+      <- Switch[-1538535479] #O -> #P
+===#Block Q(size=2, flags=10100)===
+   0. lvar12 = {281857946 ^ lvar12};
+   1. goto J
+      -> UnconditionalJump[GOTO] #Q -> #J
+      <- Switch[1203300202] #O -> #Q
+===#Block J(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto M
+      -> UnconditionalJump[GOTO] #J -> #M
+      <- UnconditionalJump[GOTO] #P -> #J
+      <- UnconditionalJump[GOTO] #Q -> #J
+===#Block M(size=2, flags=10100)===
+   0. lvar12 = dev.skidfuscator.core.TestReferenceDispatcher.ovwyrojzkitazaln(lvar12, 775394842);
+   1. goto E
+      -> UnconditionalJump[GOTO] #M -> #E
+      <- UnconditionalJump[GOTO] #J -> #M
+===#Block E(size=1, flags=0)===
+   0. return lvar9;
+      <- Immediate #C -> #E
+      <- UnconditionalJump[GOTO] #M -> #E
+===#Block R(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException("Error in hash");
+      <- DefaultSwitch #O -> #R
+===#Block G(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException();
+      <- DefaultSwitch #K -> #G
+      <- Switch[1225619315] #K -> #G

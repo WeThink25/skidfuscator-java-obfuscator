@@ -1,0 +1,56 @@
+handler=Block #J, types=[Ljava/lang/RuntimeException;], range=[Block #I, Block #H]
+===#Block A(size=1, flags=1)===
+   0. synth(lvar0 = lvar0);
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. lvar1 = new char[{lvar0.length * ({1763433826 ^ lvar17})}];
+   1. lvar2 = {1763433824 ^ lvar17};
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=1, flags=0)===
+   0. if (lvar2 >= lvar0.length)
+      goto E
+      -> ConditionalJump[IF_ICMPGE] #C -> #E
+      -> Immediate #C -> #D
+      <- Immediate #B -> #C
+      <- UnconditionalJump[GOTO] #J -> #C
+===#Block D(size=15, flags=0)===
+   0. lvar4 = lvar0[lvar2];
+   1. lvar3 = {lvar4 & ({1325777991 ^ lvar17})};
+   2. lvar6 = {lvar2 * ({1325778106 ^ lvar17})};
+   3. lvar9 = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.HEX_ARRAY;
+   4. lvar13 = {lvar3 >>> ({1325778108 ^ lvar17})};
+   5. lvar10 = lvar9[lvar13];
+   6. lvar1[lvar6] = lvar10;
+   7. lvar7 = {lvar2 * ({1325778106 ^ lvar17})};
+   8. lvar8 = {lvar7 + ({1325778105 ^ lvar17})};
+   9. lvar11 = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.HEX_ARRAY;
+   10. lvar14 = {lvar3 & ({1325778103 ^ lvar17})};
+   11. lvar12 = lvar11[lvar14];
+   12. lvar1[lvar8] = lvar12;
+   13. lvar2 = {lvar2 + ({1325778105 ^ lvar17})};
+   14. goto I
+      -> UnconditionalJump[GOTO] #D -> #I
+      <- Immediate #C -> #D
+===#Block I(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar17) == 43581617)
+      goto H
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #I -> #H
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/RuntimeException;])
+      <- UnconditionalJump[GOTO] #D -> #I
+===#Block H(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException();
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/RuntimeException;])
+      <- ConditionalJump[IF_ICMPEQ] #I -> #H
+===#Block J(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto C
+      -> UnconditionalJump[GOTO] #J -> #C
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/RuntimeException;])
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/RuntimeException;])
+===#Block E(size=3, flags=0)===
+   0. lvar5 = new java.lang.String;
+   1. _consume(lvar5.<init>(lvar1));
+   2. return lvar5;
+      <- ConditionalJump[IF_ICMPGE] #C -> #E

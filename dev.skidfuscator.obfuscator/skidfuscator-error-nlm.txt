@@ -1,0 +1,13 @@
+===#Block A(size=4, flags=1)===
+   0. lvar6 = {1277785866 ^ {1497465503 ^ 1805472447}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. lvar6 = {1281507233 ^ lvar6};
+      -> Immediate #A -> #B
+===#Block B(size=5, flags=0)===
+   0. lvar2 = javax.crypto.Cipher.getInstance(dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass$AES.azdtpokftn(dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass$AES.wbzdrcwanyyjwor(), lvar6));
+   1. _consume(lvar2.init({848795785 ^ lvar6}, lvar1));
+   2. lvar3 = new java.lang.String;
+   3. _consume(lvar3.<init>(lvar2.doFinal(lvar0)));
+   4. return lvar3;
+      <- Immediate #A -> #B

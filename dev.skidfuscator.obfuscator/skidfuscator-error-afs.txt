@@ -1,0 +1,7 @@
+===#Block A(size=2, flags=1)===
+   0. lvar3 = {579217127 ^ {271670819 ^ 1890532313}};
+   1. lvar3 = {409234283 ^ lvar3};
+      -> Immediate #A -> #B
+===#Block B(size=1, flags=0)===
+   0. return;
+      <- Immediate #A -> #B

@@ -1,0 +1,8 @@
+===#Block A(size=2, flags=1)===
+   0. synth(lvar0 = lvar0);
+   1. synth(lvar1 = lvar1);
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. lvar2 = dev.skidfuscator.core.TestCacheTemplate.initialPredicates.put(lvar0, java.lang.Integer.valueOf(lvar1));
+   1. return;
+      <- Immediate #A -> #B

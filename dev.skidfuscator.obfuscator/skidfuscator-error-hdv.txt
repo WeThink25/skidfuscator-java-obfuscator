@@ -1,0 +1,9 @@
+===#Block A(size=2, flags=1)===
+   0. lvar3 = new java/util/Random(7845783218085591913L).nextInt();
+   1. dev.skidfuscator.core.TestCacheTemplate.SfJenHT0el = {-724653937 ^ lvar3};
+      -> Immediate #A -> #B
+===#Block B(size=3, flags=0)===
+   0. _consume(dev.skidfuscator.core.TestCacheTemplate.bootstrap());
+   1. _consume(dev.skidfuscator.core.TestCacheTemplate.init());
+   2. return;
+      <- Immediate #A -> #B

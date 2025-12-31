@@ -1,0 +1,53 @@
+===#Block A(size=4, flags=1)===
+   0. lvar5 = {32462557 ^ {1154578455 ^ {1325948789 ^ lvar2}}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. lvar5 = {361211770 ^ lvar5};
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. if (lvar1 != {2131263240 ^ lvar5})
+      goto G
+   1. lvar5 = {1680379068 ^ lvar5};
+      -> ConditionalJump[IF_ICMPNE] #B -> #G
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=3, flags=0)===
+   0. lvar3 = new java.lang.IllegalStateException;
+   1. _consume(lvar3.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("stage=", lvar1))));
+   2. throw lvar3;
+      <- Immediate #B -> #C
+===#Block G(size=1, flags=10100)===
+   0. switch (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar5)) {
+      case 102762797:
+      	 goto	#H
+      case 1005266781:
+      	 goto	#F
+      case 1200518521:
+      	 goto	#D
+      case 1810850413:
+      	 goto	#G
+      default:
+      	 goto	#F
+   }
+      -> Switch[1810850413] #G -> #G
+      -> Switch[1200518521] #G -> #D
+      -> Switch[1005266781] #G -> #F
+      -> Switch[102762797] #G -> #H
+      -> Immediate #G -> #H
+      -> DefaultSwitch #G -> #F
+      <- Switch[1810850413] #G -> #G
+      <- ConditionalJump[IF_ICMPNE] #B -> #G
+===#Block H(size=2, flags=100)===
+   0. lvar5 = {1200483933 ^ lvar5};
+   1. goto D
+      -> UnconditionalJump[GOTO] #H -> #D
+      <- Switch[102762797] #G -> #H
+      <- Immediate #G -> #H
+===#Block F(size=1, flags=0)===
+   0. throw new java/lang/RuntimeException();
+      <- Switch[1005266781] #G -> #F
+      <- DefaultSwitch #G -> #F
+===#Block D(size=1, flags=0)===
+   0. return;
+      <- Switch[1200518521] #G -> #D
+      <- UnconditionalJump[GOTO] #H -> #D

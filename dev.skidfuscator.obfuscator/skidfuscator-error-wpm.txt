@@ -1,0 +1,9 @@
+===#Block A(size=2, flags=1)===
+   0. lvar3 = {745410676 ^ {1268728784 ^ 211422029}};
+   1. lvar3 = {1514589060 ^ lvar3};
+      -> Immediate #A -> #B
+===#Block B(size=3, flags=0)===
+   0. lvar0 = javax.crypto.KeyGenerator.getInstance(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.jvtdjbffns(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.cgqzwjmhpgxeixh(), lvar3));
+   1. _consume(lvar0.init({825070573 ^ lvar3}));
+   2. return lvar0.generateKey();
+      <- Immediate #A -> #B

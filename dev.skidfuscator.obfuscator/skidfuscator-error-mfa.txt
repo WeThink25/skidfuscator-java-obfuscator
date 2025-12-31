@@ -1,0 +1,10 @@
+===#Block A(size=4, flags=1)===
+   0. lvar5 = {1464369594 ^ {948569282 ^ 1890532313}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. lvar5 = {394457965 ^ lvar5};
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. lvar2 = dev.skidfuscator.core.TestCacheTemplate.initialPredicates.put(lvar0, java.lang.Integer.valueOf(lvar1));
+   1. return;
+      <- Immediate #A -> #B

@@ -1,0 +1,18 @@
+===#Block A(size=2, flags=1)===
+   0. synth(lvar0 = lvar0);
+   1. synth(lvar1 = lvar1);
+      -> Immediate #A -> #B
+===#Block B(size=1, flags=0)===
+   0. if (lvar1 != {2131263240 ^ lvar5})
+      goto D
+      -> ConditionalJump[IF_ICMPNE] #B -> #D
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=3, flags=0)===
+   0. lvar3 = new java.lang.IllegalStateException;
+   1. _consume(lvar3.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("stage=", lvar1))));
+   2. throw lvar3;
+      <- Immediate #B -> #C
+===#Block D(size=1, flags=0)===
+   0. return;
+      <- ConditionalJump[IF_ICMPNE] #B -> #D

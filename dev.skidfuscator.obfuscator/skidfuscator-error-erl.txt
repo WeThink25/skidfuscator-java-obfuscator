@@ -1,0 +1,26 @@
+===#Block A(size=4, flags=1)===
+   0. lvar5 = {1583874200 ^ {2101622123 ^ {1119891551 ^ lvar2}}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. lvar5 = {783296112 ^ lvar5};
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. if (lvar1 != {1372887899 ^ lvar5})
+      goto G
+   1. lvar5 = {1949251310 ^ lvar5};
+      -> Immediate #B -> #C
+      -> ConditionalJump[IF_ICMPNE] #B -> #G
+      <- Immediate #A -> #B
+===#Block G(size=2, flags=10100)===
+   0. lvar5 = {1137341863 ^ lvar5};
+   1. goto D
+      -> UnconditionalJump[GOTO] #G -> #D
+      <- ConditionalJump[IF_ICMPNE] #B -> #G
+===#Block D(size=1, flags=0)===
+   0. return;
+      <- UnconditionalJump[GOTO] #G -> #D
+===#Block C(size=3, flags=0)===
+   0. lvar3 = new java.lang.IllegalStateException;
+   1. _consume(lvar3.<init>(dynamic_invoke<java.lang.String>(java.lang.invoke.StringConcatFactory.makeConcatWithConstants("stage=", lvar1))));
+   2. throw lvar3;
+      <- Immediate #B -> #C

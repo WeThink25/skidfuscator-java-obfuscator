@@ -1,0 +1,102 @@
+handler=Block #N, types=[Ljava/lang/IllegalAccessException;], range=[Block #I, Block #H]
+===#Block A(size=3, flags=1)===
+   0. lvar17 = {271112785 ^ {987960937 ^ 211422029}};
+   1. synth(lvar0 = lvar0);
+   2. lvar17 = {1707452866 ^ lvar17};
+      -> Immediate #A -> #B
+===#Block B(size=3, flags=0)===
+   0. lvar1 = new char[{lvar0.length * ({1133801141 ^ lvar17})}];
+   1. lvar2 = {1133801143 ^ lvar17};
+   2. lvar17 = {395707979 ^ lvar17};
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=2, flags=0)===
+   0. if (lvar2 >= lvar0.length)
+      goto M
+   1. lvar17 = {1914958909 ^ lvar17};
+      -> ConditionalJump[IF_ICMPGE] #C -> #M
+      -> Immediate #C -> #E
+      <- UnconditionalJump[GOTO] #L -> #C
+      <- Immediate #B -> #C
+===#Block E(size=15, flags=0)===
+   0. lvar5 = lvar0[lvar2];
+   1. lvar3 = {lvar5 & ({639736894 ^ lvar17})};
+   2. lvar6 = {lvar2 * ({639737027 ^ lvar17})};
+   3. lvar9 = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.HEX_ARRAY;
+   4. lvar13 = {lvar3 >>> ({639737029 ^ lvar17})};
+   5. lvar10 = lvar9[lvar13];
+   6. lvar1[lvar6] = lvar10;
+   7. lvar7 = {lvar2 * ({639737027 ^ lvar17})};
+   8. lvar8 = {lvar7 + ({639737024 ^ lvar17})};
+   9. lvar11 = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.HEX_ARRAY;
+   10. lvar14 = {lvar3 & ({639737038 ^ lvar17})};
+   11. lvar12 = lvar11[lvar14];
+   12. lvar1[lvar8] = lvar12;
+   13. lvar2 = {lvar2 + ({639737024 ^ lvar17})};
+   14. goto K
+      -> UnconditionalJump[GOTO] #E -> #K
+      <- Immediate #C -> #E
+===#Block K(size=2, flags=10100)===
+   0. lvar17 = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.lscaiulccaijbvte(lvar17, 1057057260);
+   1. goto I
+      -> UnconditionalJump[GOTO] #K -> #I
+      <- UnconditionalJump[GOTO] #E -> #K
+===#Block I(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar17) == 11518503)
+      goto H
+   1. throw nullconst;
+      -> TryCatch range: [I...H] -> N ([Ljava/lang/IllegalAccessException;])
+      -> ConditionalJump[IF_ICMPEQ] #I -> #H
+      <- UnconditionalJump[GOTO] #K -> #I
+===#Block H(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [I...H] -> N ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #I -> #H
+===#Block N(size=1, flags=0)===
+   0. switch (rnrqiaasxzigoubn.irtsskmbdllglsqw.rjiuafhwfbvkmxfs(lvar17)) {
+      case -922244760:
+      	 goto	#O
+      case 476176032:
+      	 goto	#P
+      default:
+      	 goto	#Q
+   }
+      -> DefaultSwitch #N -> #Q
+      -> Switch[476176032] #N -> #P
+      -> Switch[-922244760] #N -> #O
+      <- TryCatch range: [I...H] -> N ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [I...H] -> N ([Ljava/lang/IllegalAccessException;])
+===#Block O(size=2, flags=10100)===
+   0. lvar17 = {106839561 ^ lvar17};
+   1. goto J
+      -> UnconditionalJump[GOTO] #O -> #J
+      <- Switch[-922244760] #N -> #O
+===#Block P(size=2, flags=10100)===
+   0. lvar17 = {485683440 ^ lvar17};
+   1. goto J
+      -> UnconditionalJump[GOTO] #P -> #J
+      <- Switch[476176032] #N -> #P
+===#Block J(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto L
+      -> UnconditionalJump[GOTO] #J -> #L
+      <- UnconditionalJump[GOTO] #P -> #J
+      <- UnconditionalJump[GOTO] #O -> #J
+===#Block L(size=2, flags=10100)===
+   0. lvar17 = {1266459608 ^ lvar17};
+   1. goto C
+      -> UnconditionalJump[GOTO] #L -> #C
+      <- UnconditionalJump[GOTO] #J -> #L
+===#Block Q(size=1, flags=0)===
+   0. throw new java/io/IOException("Error in hash");
+      <- DefaultSwitch #N -> #Q
+===#Block M(size=2, flags=10100)===
+   0. lvar17 = {988361043 ^ lvar17};
+   1. goto D
+      -> UnconditionalJump[GOTO] #M -> #D
+      <- ConditionalJump[IF_ICMPGE] #C -> #M
+===#Block D(size=3, flags=0)===
+   0. lvar4 = new java.lang.String;
+   1. _consume(lvar4.<init>(lvar1));
+   2. return lvar4;
+      <- UnconditionalJump[GOTO] #M -> #D

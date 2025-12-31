@@ -1,0 +1,56 @@
+handler=Block #J, types=[Ljava/lang/IllegalAccessException;], range=[Block #I, Block #H]
+===#Block A(size=1, flags=1)===
+   0. synth(lvar0 = lvar0);
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. lvar1 = new char[{lvar0.length * ({1133801141 ^ lvar17})}];
+   1. lvar2 = {1133801143 ^ lvar17};
+      -> Immediate #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=1, flags=0)===
+   0. if (lvar2 >= lvar0.length)
+      goto D
+      -> Immediate #C -> #E
+      -> ConditionalJump[IF_ICMPGE] #C -> #D
+      <- Immediate #B -> #C
+      <- UnconditionalJump[GOTO] #J -> #C
+===#Block D(size=3, flags=0)===
+   0. lvar4 = new java.lang.String;
+   1. _consume(lvar4.<init>(lvar1));
+   2. return lvar4;
+      <- ConditionalJump[IF_ICMPGE] #C -> #D
+===#Block E(size=15, flags=0)===
+   0. lvar5 = lvar0[lvar2];
+   1. lvar3 = {lvar5 & ({639736894 ^ lvar17})};
+   2. lvar6 = {lvar2 * ({639737027 ^ lvar17})};
+   3. lvar9 = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.HEX_ARRAY;
+   4. lvar13 = {lvar3 >>> ({639737029 ^ lvar17})};
+   5. lvar10 = lvar9[lvar13];
+   6. lvar1[lvar6] = lvar10;
+   7. lvar7 = {lvar2 * ({639737027 ^ lvar17})};
+   8. lvar8 = {lvar7 + ({639737024 ^ lvar17})};
+   9. lvar11 = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.HEX_ARRAY;
+   10. lvar14 = {lvar3 & ({639737038 ^ lvar17})};
+   11. lvar12 = lvar11[lvar14];
+   12. lvar1[lvar8] = lvar12;
+   13. lvar2 = {lvar2 + ({639737024 ^ lvar17})};
+   14. goto I
+      -> UnconditionalJump[GOTO] #E -> #I
+      <- Immediate #C -> #E
+===#Block I(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar17) == 11518503)
+      goto H
+   1. throw nullconst;
+      -> ConditionalJump[IF_ICMPEQ] #I -> #H
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      <- UnconditionalJump[GOTO] #E -> #I
+===#Block H(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #I -> #H
+===#Block J(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto C
+      -> UnconditionalJump[GOTO] #J -> #C
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])

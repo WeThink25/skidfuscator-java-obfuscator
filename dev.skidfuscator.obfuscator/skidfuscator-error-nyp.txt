@@ -1,0 +1,17 @@
+===#Block A(size=5, flags=1)===
+   0. lvar6 = {898533145 ^ {1720100545 ^ java.lang.Integer.parseInt("940769739")}};
+   1. dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.ljmddnjkbw = dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.zuspxkitiycjoir();
+   2. lvar3 = new java/util/Random(-4378548869933435426L).nextInt();
+   3. dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.ZLHtA711B3 = {-1384170839 ^ lvar3};
+   4. lvar6 = {275174656 ^ lvar6};
+      -> Immediate #A -> #B
+===#Block B(size=8, flags=0)===
+   0. lvar0 = new byte[{2071852310 ^ lvar6}];
+   1. lvar0[{2071852307 ^ lvar6}] = {2071852307 ^ lvar6};
+   2. lvar0[{2071852306 ^ lvar6}] = {2071852306 ^ lvar6};
+   3. lvar0[{2071852305 ^ lvar6}] = {2071852311 ^ lvar6};
+   4. lvar0[{2071852304 ^ lvar6}] = {2071852304 ^ lvar6};
+   5. lvar0[{2071852311 ^ lvar6}] = {2071852305 ^ lvar6};
+   6. dev.skidfuscator.testclasses.exclusion.ObfuscatedTestClass.data = lvar0;
+   7. return;
+      <- Immediate #A -> #B

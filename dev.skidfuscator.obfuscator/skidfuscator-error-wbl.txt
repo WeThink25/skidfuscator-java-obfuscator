@@ -1,0 +1,50 @@
+handler=Block #J, types=[Ljava/lang/IllegalAccessException;], range=[Block #I, Block #H]
+===#Block A(size=7, flags=1)===
+   0. synth(lvar0 = lvar0);
+   1. synth(lvar1 = lvar1);
+   2. synth(lvar2 = lvar2);
+   3. synth(lvar3 = lvar3);
+   4. synth(lvar4 = lvar4);
+   5. synth(lvar5 = lvar5);
+   6. synth(lvar6 = lvar6);
+      -> Immediate #A -> #B
+===#Block B(size=3, flags=0)===
+   0. lvar7 = java.lang.Class.forName((java.lang.String)lvar4);
+   1. lvar8 = java.lang.invoke.MethodType.fromMethodDescriptorString((java.lang.String)lvar6, lvar7.getClassLoader());
+   2. if (((java.lang.Integer)lvar3).intValue() != {768600579 ^ lvar12})
+      goto C
+      -> Immediate #B -> #D
+      -> ConditionalJump[IF_ICMPNE] #B -> #C
+      <- Immediate #A -> #B
+===#Block C(size=2, flags=0)===
+   0. lvar9 = new java.lang.invoke.MutableCallSite;
+   1. _consume(lvar9.<init>(lvar0.findVirtual(lvar7, (java.lang.String)lvar5, lvar8).asType(lvar2)));
+      -> Immediate #C -> #E
+      <- ConditionalJump[IF_ICMPNE] #B -> #C
+===#Block D(size=3, flags=0)===
+   0. lvar9 = new java.lang.invoke.MutableCallSite;
+   1. _consume(lvar9.<init>(lvar0.findStatic(lvar7, (java.lang.String)lvar5, lvar8).asType(lvar2)));
+   2. goto I
+      -> UnconditionalJump[GOTO] #D -> #I
+      <- Immediate #B -> #D
+===#Block I(size=2, flags=0)===
+   0. if (rnrqiaasxzigoubn.irtsskmbdllglsqw.izvfzznetjvdgljw(lvar12) == 97151195)
+      goto H
+   1. throw nullconst;
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      -> ConditionalJump[IF_ICMPEQ] #I -> #H
+      <- UnconditionalJump[GOTO] #D -> #I
+===#Block H(size=1, flags=0)===
+   0. throw new java/lang/IllegalAccessException();
+      -> TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      <- ConditionalJump[IF_ICMPEQ] #I -> #H
+===#Block J(size=2, flags=0)===
+   0. _consume(catch());
+   1. goto E
+      -> UnconditionalJump[GOTO] #J -> #E
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+      <- TryCatch range: [I...H] -> J ([Ljava/lang/IllegalAccessException;])
+===#Block E(size=1, flags=0)===
+   0. return lvar9;
+      <- Immediate #C -> #E
+      <- UnconditionalJump[GOTO] #J -> #E

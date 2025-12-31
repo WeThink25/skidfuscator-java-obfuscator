@@ -1,0 +1,10 @@
+===#Block A(size=4, flags=1)===
+   0. lvar6 = {768890925 ^ {45521982 ^ java.lang.Integer.parseInt("1629165817")}};
+   1. lvar3 = new java/util/Random(-7214793778174252131L).nextInt();
+   2. dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.O6wfg5sAUO = {-633430409 ^ lvar3};
+   3. lvar6 = {343066998 ^ lvar6};
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.HEX_ARRAY = dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kraknykvkb(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.wndztrriapdtzgn(), dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bzghuwsrexyuiwv(), lvar6).toCharArray();
+   1. return;
+      <- Immediate #A -> #B

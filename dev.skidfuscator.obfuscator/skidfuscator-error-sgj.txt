@@ -1,0 +1,11 @@
+===#Block A(size=2, flags=1)===
+   0. synth(lvar0 = lvar0);
+   1. synth(lvar1 = lvar1);
+      -> Immediate #A -> #B
+===#Block B(size=5, flags=0)===
+   0. lvar2 = javax.crypto.Cipher.getInstance(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.jvtdjbffns(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.bzblifrlmvomvbn(), lvar6));
+   1. _consume(lvar2.init({1409816122 ^ lvar6}, lvar1));
+   2. lvar3 = new java.lang.String;
+   3. _consume(lvar3.<init>(lvar2.doFinal(lvar0)));
+   4. return lvar3;
+      <- Immediate #A -> #B

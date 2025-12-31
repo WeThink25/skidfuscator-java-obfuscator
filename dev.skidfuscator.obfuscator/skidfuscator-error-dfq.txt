@@ -1,0 +1,9 @@
+===#Block A(size=0, flags=1)===
+      -> Immediate #A -> #B
+===#Block B(size=5, flags=0)===
+   0. lvar0 = new java.util.HashMap;
+   1. _consume(lvar0.<init>());
+   2. dev.skidfuscator.core.TestCacheTemplate.initialPredicates = lvar0;
+   3. lvar1 = dev.skidfuscator.core.TestCacheTemplate.initialPredicates.put(dev.skidfuscator.core.TestCacheTemplate.wtmssgaizu(dev.skidfuscator.core.TestCacheTemplate.ykkjkosbaqrbxxx(), dev.skidfuscator.core.TestCacheTemplate.mdxftacqosczdop(), lvar4), java.lang.Integer.valueOf({1053327236 ^ lvar4}));
+   4. return;
+      <- Immediate #A -> #B

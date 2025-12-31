@@ -1,0 +1,13 @@
+===#Block A(size=4, flags=1)===
+   0. lvar6 = {2128113337 ^ {2115736549 ^ 1285045344}};
+   1. synth(lvar0 = lvar0);
+   2. synth(lvar1 = lvar1);
+   3. lvar6 = {148193707 ^ lvar6};
+      -> Immediate #A -> #B
+===#Block B(size=5, flags=0)===
+   0. lvar2 = javax.crypto.Cipher.getInstance(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.kraknykvkb(dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.izyqvvirwtdayok(), dev.skidfuscator.testclasses.exclusion.UnobfuscatedTestClass$AES.bzghuwsrexyuiwv(), lvar6));
+   1. _consume(lvar2.init({1150189717 ^ lvar6}, lvar1));
+   2. lvar3 = new java.lang.String;
+   3. _consume(lvar3.<init>(lvar2.doFinal(lvar0)));
+   4. return lvar3;
+      <- Immediate #A -> #B

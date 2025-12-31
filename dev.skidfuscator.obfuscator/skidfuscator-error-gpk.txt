@@ -1,0 +1,5 @@
+===#Block A(size=0, flags=1)===
+      -> Immediate #A -> #B
+===#Block B(size=1, flags=0)===
+   0. return;
+      <- Immediate #A -> #B

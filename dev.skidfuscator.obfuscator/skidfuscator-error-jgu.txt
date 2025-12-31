@@ -1,0 +1,11 @@
+===#Block A(size=5, flags=1)===
+   0. lvar6 = {1948906136 ^ {1007785269 ^ java.lang.Integer.parseInt("771565153")}};
+   1. dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.flzinhcguj = java.nio.ByteBuffer.wrap(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.yytkzgqhombnrsl()).asCharBuffer().toString();
+   2. lvar3 = new java/util/Random(5430521905919384490L).nextInt();
+   3. dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.9ijbydzS7G = {-1205333857 ^ lvar3};
+   4. lvar6 = {1584135831 ^ lvar6};
+      -> Immediate #A -> #B
+===#Block B(size=2, flags=0)===
+   0. dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.HEX_ARRAY = dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.jvtdjbffns(dev.skidfuscator.testclasses.opaque.OpaqueConditionClazz$AES.gbtgorrlvhhhtmb(), lvar6).toCharArray();
+   1. return;
+      <- Immediate #A -> #B
