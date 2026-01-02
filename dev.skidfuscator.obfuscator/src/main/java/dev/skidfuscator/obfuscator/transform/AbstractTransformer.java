@@ -13,10 +13,10 @@ import java.util.List;
 
 import static org.fusesource.jansi.Ansi.ansi;
 
-public abstract class AbstractTransformer implements Transformer {
+public abstract class AbstractTransformer<T extends DefaultTransformerConfig> implements Transformer {
     protected final Skidfuscator skidfuscator;
     protected final String name;
-    private final DefaultTransformerConfig config;
+    private final T config;
     private final List<Transformer> children;
     private int success;
     private int skipped;
@@ -34,7 +34,7 @@ public abstract class AbstractTransformer implements Transformer {
         this.config = this.createConfig();
     }
 
-    protected <T extends DefaultTransformerConfig> T createConfig() {
+    protected T createConfig() {
         return (T) new DefaultTransformerConfig(skidfuscator.getTsConfig(), MiscUtil.toCamelCase(name));
     }
 
@@ -44,7 +44,8 @@ public abstract class AbstractTransformer implements Transformer {
                 || skidfuscator.getConfig().getBoolean("sdk.enabled", true));
     }
 
-    public DefaultTransformerConfig getConfig() {
+    @SuppressWarnings("unchecked")
+    public T getConfig() {
         return config;
     }
 

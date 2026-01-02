@@ -91,12 +91,12 @@ public class InterproceduralTransformer extends AbstractTransformer {
         //System.out.println("Iterating group " + skidGroup.getName());
 
         final Parameter parameterGroup = new Parameter(skidGroup.getDesc());
-        if (skidGroup.getInvokers().stream().map(SkidInvocation::getExpr)
+        if (skidGroup.getInvokers().stream().map(invocation -> (Expr) invocation.getExpr())
                 .anyMatch(DynamicInvocationExpr.class::isInstance)) {
             final DynamicInvocationExpr invocationExpr = skidGroup
                     .getInvokers()
                     .stream()
-                    .map(SkidInvocation::getExpr)
+                    .map(invocation -> (Expr) invocation.getExpr())
                     .filter(DynamicInvocationExpr.class::isInstance)
                     .findFirst()
                     .map(DynamicInvocationExpr.class::cast)

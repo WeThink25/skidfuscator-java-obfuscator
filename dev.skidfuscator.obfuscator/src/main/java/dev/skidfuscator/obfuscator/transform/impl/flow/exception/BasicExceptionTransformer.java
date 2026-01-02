@@ -41,7 +41,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class BasicExceptionTransformer extends AbstractTransformer {
+public class BasicExceptionTransformer extends AbstractTransformer<BasicExceptionConfig> {
     public BasicExceptionTransformer(Skidfuscator skidfuscator) {
         this(skidfuscator, Collections.emptyList());
     }
@@ -212,15 +212,16 @@ public class BasicExceptionTransformer extends AbstractTransformer {
     }
 
     @Override
-    protected <T extends DefaultTransformerConfig> T createConfig() {
-        return (T) new BasicExceptionConfig(
+    protected BasicExceptionConfig createConfig() {
+        return new BasicExceptionConfig(
                 skidfuscator.getTsConfig(),
                 MiscUtil.toCamelCase(name)
         );
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public BasicExceptionConfig getConfig() {
-        return (BasicExceptionConfig) super.getConfig();
+        return super.getConfig();
     }
 }

@@ -33,7 +33,7 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.topdank.byteengineer.commons.data.JarClassData;
 
-public class DriverTransformer extends AbstractTransformer {
+public class DriverTransformer extends AbstractTransformer<DriverConfig> {
     public DriverTransformer(Skidfuscator skidfuscator) {
         super(skidfuscator, "Driver");
     }
@@ -228,12 +228,13 @@ public class DriverTransformer extends AbstractTransformer {
     }
 
     @Override
-    protected <T extends DefaultTransformerConfig> T createConfig() {
-        return (T) new DriverConfig(skidfuscator.getTsConfig(), MiscUtil.toCamelCase(name));
+    protected DriverConfig createConfig() {
+        return new DriverConfig(skidfuscator.getTsConfig(), MiscUtil.toCamelCase(name));
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public DriverConfig getConfig() {
-        return (DriverConfig) super.getConfig();
+        return super.getConfig();
     }
 }

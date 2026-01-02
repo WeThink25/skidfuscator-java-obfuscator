@@ -60,6 +60,7 @@ import dev.skidfuscator.obfuscator.transform.impl.misc.AhegaoTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.number.NumberTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.pure.PureHashTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.sdk.SdkInjectorTransformer;
+import dev.skidfuscator.obfuscator.transform.impl.string.PolymorphicStringTransformer;
 import dev.skidfuscator.obfuscator.transform.impl.string.StringEncryptionType;
 import dev.skidfuscator.obfuscator.transform.impl.string.StringTransformerV2;
 import dev.skidfuscator.obfuscator.util.ConsoleColors;
@@ -731,6 +732,7 @@ public class Skidfuscator {
             if (tsConfig.hasPath("stringEncryption.type")) {
                 switch (tsConfig.getEnum(StringEncryptionType.class, "stringEncryption.type")) {
                     case STANDARD: transformers.add(new StringTransformerV2(this)); break;
+                    case POLYMORPHIC: transformers.add(new PolymorphicStringTransformer(this)); break;
                 }
             } else {
                 transformers.add(new StringTransformerV2(this));

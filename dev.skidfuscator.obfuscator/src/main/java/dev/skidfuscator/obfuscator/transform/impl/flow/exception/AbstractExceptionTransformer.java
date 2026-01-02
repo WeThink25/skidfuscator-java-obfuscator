@@ -6,7 +6,7 @@ import dev.skidfuscator.obfuscator.transform.Transformer;
 
 import java.util.List;
 
-public abstract class AbstractExceptionTransformer extends AbstractTransformer {
+public abstract class AbstractExceptionTransformer extends AbstractTransformer<BasicExceptionConfig> {
     public AbstractExceptionTransformer(Skidfuscator skidfuscator) {
         super(skidfuscator, "Flow Exception");
     }

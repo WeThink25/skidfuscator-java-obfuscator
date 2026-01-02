@@ -4,6 +4,8 @@ exempt: [
 
 libs: []
 
+# String Encryption Configuration
+# type options: STANDARD (default, mixed algorithms), POLYMORPHIC (per-string variant encryption)
 stringEncryption {
   type: STANDARD
   enabled: true

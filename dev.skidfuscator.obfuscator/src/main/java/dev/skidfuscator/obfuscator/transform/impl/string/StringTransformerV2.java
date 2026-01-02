@@ -14,6 +14,7 @@ import dev.skidfuscator.obfuscator.transform.impl.string.generator.EncryptionGen
 import dev.skidfuscator.obfuscator.transform.impl.string.generator.v3.ByteBufferClinitV3EncryptionGenerator;
 import dev.skidfuscator.obfuscator.transform.impl.string.generator.v3.BytesClinitV3EncryptionGenerator;
 import dev.skidfuscator.obfuscator.transform.impl.string.generator.v3.BytesV3EncryptionGenerator;
+import dev.skidfuscator.obfuscator.transform.impl.string.generator.v3.PolymorphicEncryptionGeneratorV3;
 import dev.skidfuscator.obfuscator.transform.impl.string.generator.v3.VirtualizedStringEncryptionGenerator;
 import dev.skidfuscator.obfuscator.util.RandomUtil;
 import org.mapleir.asm.ClassNode;
@@ -67,7 +68,7 @@ public class StringTransformerV2 extends AbstractTransformer {
             //generator = new VirtualizedStringEncryptionGenerator();
             //keyMap.put(parentNode, generator);
             if (true) {
-                switch (RandomUtil.nextInt(3)) {
+                switch (RandomUtil.nextInt(4)) {
                     case 0: {
                         final int size = RandomUtil.nextInt(127) + 1;
                         final byte[] keys = new byte[size];
@@ -88,8 +89,18 @@ public class StringTransformerV2 extends AbstractTransformer {
                         keyMap.put(parentNode, (generator = new BytesClinitV3EncryptionGenerator(keys)));
                         break;
                     }
-                    default: {
+                    case 2: {
                         keyMap.put(parentNode, (generator = new ByteBufferClinitV3EncryptionGenerator()));
+                        break;
+                    }
+                    default: {
+                        final int size = RandomUtil.nextInt(127) + 1;
+                        final byte[] keys = new byte[size];
+
+                        for (int i = 0; i < size; i++) {
+                            keys[i] = (byte) (RandomUtil.nextInt(127) + 1);
+                        }
+                        keyMap.put(parentNode, (generator = new PolymorphicEncryptionGeneratorV3(keys)));
                         break;
                     }
                 }
